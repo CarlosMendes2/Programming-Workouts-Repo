@@ -1,4 +1,4 @@
-# GitHub Exercise Lists Repository
+# Exercise Lists Repository
 
 This repository serves as a hub for storing exercise lists sourced from various GitHub repositories. These exercises may not have been assigned directly in a classroom setting but are discovered and compiled from diverse GitHub sources.
 

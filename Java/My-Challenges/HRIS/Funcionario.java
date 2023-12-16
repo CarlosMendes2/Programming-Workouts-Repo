@@ -6,9 +6,10 @@ public class Funcionario {
     double salario;
     int idade;
     String departamento;
-    private Funcionario(){
+    Funcionario(){
 
     }
+    static Cargos cargos = new Cargos();
     ArrayList<Funcionario> corpoFuncionarios = new ArrayList<>();
     private Funcionario(String nome,String cargo,double salario,int idade,String departamento){
         this.nome = nome;
@@ -18,17 +19,18 @@ public class Funcionario {
         this.departamento = departamento;
     }
 
-    Funcionario criarFuncionario(String nome,String cargo,int idade){
-        int salarioF = salarioCargo();
-        String departamentoF = departamentoCargo();
-        return new Funcionario(nome,cargo,salarioF,idade,departamentoF);
+    public static boolean criarFuncionario(String nome,String cargo,int idade){
+        double salarioF = salarioCargo(cargo);
+        String departamentoF = departamentoCargo(cargo);
+        new Funcionario(nome,cargo,salarioF,idade,departamentoF);
+        return true;
     }
 
-    private String departamentoCargo() {
-        return "";
+    private static String departamentoCargo(String cargo) {
+        return cargos.getDepartamento(cargo);
     }
 
-    private int salarioCargo() {
-        return 0;
+    private static double salarioCargo(String cargo) {
+        return cargos.getSalario(cargo);
     }
 }

@@ -14,11 +14,11 @@ public class BEE1044 {
     private static void verificaMultiplos(int valorA, int valorB) {
         double operacao;
         if(valorA>valorB){
-            operacao = (double) valorA / valorB;
+            operacao = (double) valorA % valorB;
         }else{
-            operacao = (double) valorB / valorA;
+            operacao = (double) valorB % valorA;
         }
-        if (operacao % 2 == 0){
+        if (operacao == 0){
             System.out.println("Sao Multiplos");
         }else{
             System.out.println("Nao sao Multiplos");

@@ -11,7 +11,6 @@ public class BEE1002 {
     }
     public static double areaCirculo(double a){
         final double PI = 3.14159;
-        double calculo = PI * (Math.pow(a,2));
-        return calculo;
+        return PI * (Math.pow(a,2));
     }
 }
